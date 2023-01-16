@@ -1,0 +1,11 @@
+
+@forelse(@$section as $section)
+
+@foreach(\App\Models\Admin\ProductManage::where('section_id', 'like', '%"'.$section->id.'"%')->where('status','1')->get() as $product)
+
+@endforeach
+
+@empty
+
+@endforelse
+               
